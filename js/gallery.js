@@ -98,5 +98,10 @@ gallery.addEventListener("click", function (event) {
       `<img src="${imageUrl}" alt="Large Image">`
     );
     instance.show();
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && instance) {
+        instance.close();
+      }
+    });
   }
 });
